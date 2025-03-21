@@ -43,7 +43,7 @@ def get_users():
     users = User.query.all()
     return make_response(jsonify([user.json() for user in users]), 200)
   except e:
-    return make_response(jsonify({'message': 'error getting users !!!!'}), 500)
+    return make_response(jsonify({'message': 'error getting users '}), 500)
 
 # get a user by id
 @app.route('/users/<int:id>', methods=['GET'])
